@@ -17,7 +17,7 @@ const First = () => {
             <div className="text-center pt-2">
             <a className="text-center text-blue-500 text-sm hover:text-blue-800 " href="#">Forgot Password?</a>
             <p className="text-center text-gray-500 text-sm">
-    &copy;2020 Optic Third Eye. All rights reserved.</p>
+            &copy;2020 Optic Third Eye. All rights reserved.</p>
             </div>
             </form>
         </div>
