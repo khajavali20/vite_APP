@@ -1,12 +1,17 @@
 import NoteItem from "./components/NoteItem";
+import {useState} from "react";
 
 const App = () => {
+  const [title, setTitle] = useState("default");
   return(
     <div className="max-w-3xl  mx-auto space-y-6">
     <div className=" space-y-6  bg-lime-400 shadow-md rounded p-5">
       <h1 className="font-semibold text-2xl text-blue-500  text-center">Note Application</h1>
       <div>
-      <input className="w-full border-b-2 border-orange-500 outline-none " placeholder="Title" type="text" />
+        { title.trim() && title.length < 3 ? <p className="text-red-500">Title is too short </p>: null }
+      <input onChange={(evt) => {
+        setTitle (evt.target.value);
+      }} className="w-full border-b-2 border-orange-500 outline-none " placeholder="Title" type="text" />
       </div>
       <div>
       <textarea className="w-full border-b-2 border-orange-500 outline-none resize-none h-36" placeholder=" Description"></textarea>
